@@ -24,7 +24,7 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  text-align: center;;
+  text-align: center;
 
   padding-bottom: 5px;
   margin: 40px;
@@ -35,7 +35,9 @@ img {
 
     display: flex;
     justify-content: center;
-    width: 200px;
+    align-items: center;
+    width: 250px;
+    height: 250px;
     margin: 40px auto;
     padding: 20px;
 
@@ -53,8 +55,13 @@ img {
   padding: 2px 16px;
 }
 
-.container img {
+.card img {
     margin: 50px;
+}
+
+
+.selected {
+    border: 3px solid #ff6ad5;
 }
 
 #play-button {
@@ -66,5 +73,15 @@ img {
     height: 50px;
     border-radius: 4px;
 }
+
+#user-text, #computer-text {
+    font-weight: bold;
+}
+
+#computer-img {
+    width: 130px;
+    height: 170px;
+}
+
 
 
