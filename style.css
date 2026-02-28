@@ -18,11 +18,13 @@ img {
     padding: 10px;
 }
 
+
 .card {
   border: 3px solid #BDE0FE;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  text-align: center;;
 
   padding-bottom: 5px;
   margin: 40px;
@@ -64,4 +66,5 @@ img {
     height: 50px;
     border-radius: 4px;
 }
+
 
