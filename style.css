@@ -1,0 +1,67 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    background-color:#CDB4DB;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    margin: 0px;
+}
+
+img {
+    border: 2px solid gainsboro;
+    padding: 10px;
+}
+
+.card {
+  border: 3px solid #BDE0FE;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  padding-bottom: 5px;
+  margin: 40px;
+}
+
+.computer-card {
+    border: 3px solid #FFC8DD;
+
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin: 40px auto;
+    padding: 20px;
+
+}
+
+.results-card {
+    border: 3px solid #FFAFCC;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.container img {
+    margin: 50px;
+}
+
+#play-button {
+    background-color: #8093f1;
+    border: none;
+
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 4px;
+}
+
