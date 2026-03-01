@@ -7,6 +7,7 @@ let playerChoice = '';
 //Getting the button
 const playButton = document.querySelector('#play-button');
 const computerChoices = ['rock', 'paper', 'scissors'];
+const computerImages = ['rock.PNG', 'paper.PNG', 'scissors.PNG'];
 
 //Adding event listeners for rock, paper, and scissors
 playerRock.addEventListener('click', setRock);
@@ -52,16 +53,65 @@ function playGame(){
     const choiceNumber = Math.floor(Math.random()*3);
     const computerFinal = computerChoices[choiceNumber];
 
-    //Changing the image for the computers throw and adding it to the selected class
-    const computerImg = document.querySelector('#computer-img');
-
-    computerImg.src = `Images/${computerFinal}.png`
-    computerImg.classList.add('selected');
-
-    //Changing the text to display what the user selected and what the computer selected
     const playerText = document.querySelector('#user-text');
     const computerText = document.querySelector('#computer-text');
 
+    const computerImg = document.querySelector('#computer-img');
+
+    const finalText = document.querySelector('#final-text');
+
+    function changingImage(){
+        computerImg.src = "Images/" + computerImages[Math.floor(Math.random() * 3)];
+    }
+
+    const interval = setInterval(changingImage, 100)
+    
+    function finalImage(){
+        clearInterval(interval);
+
+        computerImg.src = "Images/" + computerImages[choiceNumber];
+        computerImg.classList.add('selected');
+
+        computerText.textContent = "Computers throw: " + computerFinal;
+
+        //Checking the players choice against the computers choice and displaying the appropriate response
+        if (playerChoice == computerFinal){
+            finalText.textContent = "Results: You tied!";
+        }
+        else if (playerChoice == 'rock'){
+            if (computerFinal == 'paper'){
+                finalText.textContent= "Results: You lose :(";
+            }
+            else {
+                finalText.textContent = "Results: You win!";
+            }
+        }
+        else if (playerChoice == 'paper'){
+            if (computerFinal == 'scissors'){
+                finalText.textContent = "Results: You lose :(";
+            }
+            else {
+                finalText.textContent = "Results: You win!";
+            }
+        }
+        else if (playerChoice == 'scissors'){
+            if (computerFinal == 'rock'){
+                finalText.textContent = "Results: You lose :(";
+            }
+            else {
+                finalText.textContent = "Results: You win!";
+            }
+        }
+    }
+
+    setTimeout(finalImage, 3000);
+
+
+    //Changing the text to display what the user selected
     playerText.textContent = "Your throw: " + playerChoice;
-    computerText.textContent = "Computers throw: " + computerFinal;
+
+
+
+    playButton.textContent = "Play again!";
+
 }
