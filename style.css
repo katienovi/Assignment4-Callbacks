@@ -1,3 +1,12 @@
+/*
+  Name: Katie Williams
+  Date: 03.01.26
+  CSC 372-01
+
+  This is the style.css page for my rock, paper, scissors website. It includes styling for the body, headings, images, users card,
+  computer card, results card, and score card, card containers, selected elements, text styling, and buttons.
+*/
+
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: white;
@@ -50,6 +59,12 @@ img {
     align-items: center;;
 }
 
+.points-card {
+    border: 3px solid #8093f1;
+
+    margin-top: 5px;
+}
+
 .container {
   padding: 2px 16px;
 }
@@ -64,7 +79,18 @@ img {
     padding: 10px;
 }
 
-#play-button {
+#reset-button {
+    background-color:#CDB4DB;
+    border: none;
+
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 4px;
+    margin-top: 3px;
+ }
+
+#play-button{
     background-color: #8093f1;
     border: none;
 

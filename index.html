@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!--
+  Name: Katie Williams
+  Date: 03.01.26
+  CSC 372-01
+
+  This is the index.html page for my rock, paper, scissors website. It includes 4 sections. One for the users choice, one for the
+  computers choice, one for the result, and one for the score.
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,16 +18,15 @@
 </head>
 <body>
 
-     <!--https://coolors.co/palette/cdb4db-ffc8dd-ffafcc-bde0fe-a2d2ff-->
     <header>
         <h1>Rock, Paper, Scissors, GO!</h1>
     </header>
 
     <div class="card">
         <div class="container">
-            <img id ="rock-img" src="Images/rock.PNG">
-            <img id = "paper-img" src="Images/paper.PNG">
-            <img id = "scissors-img" src="Images/scissors.PNG">
+            <img id ="rock-img" src="Images/rock.PNG" alt="rock">
+            <img id = "paper-img" src="Images/paper.PNG" alt="paper">
+            <img id = "scissors-img" src="Images/scissors.PNG" alt="scissors">
 
             <p id="user-text">Your throw:</p>
         </div>
@@ -27,7 +34,7 @@
 
     <div class="computer-card">
         <div class="computer-container">
-            <img id="computer-img" src="Images/question-mark.PNG">
+            <img id="computer-img" src="Images/question-mark.PNG" alt="question mark">
 
             <p id="computer-text">Computers throw:</p>
         </div>
@@ -37,7 +44,14 @@
             <p id="final-text">Results: </p>
             <button id="play-button">Play!</button>
     </div>
-  
-    
+
+    <div class="points-card">
+        <p id="wins-text">Wins: 0</p>
+        <p id="loss-text">Losses: 0</p>
+        <p id="tie-text">Ties: 0</p>
+
+        <button id="reset-button">Reset Score</button>
+    </div>
+
 </body>
 </html>
